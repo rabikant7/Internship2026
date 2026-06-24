@@ -1,0 +1,238 @@
+*{
+  margin:0px;
+  padding:0px;
+}
+.nav_bar{
+  background-color: black;
+  height: 40px;
+  width: 100vw;
+  display: flex;
+  
+  align-items: center;
+  flex-direction: row;
+  position: fixed;
+
+}
+.nav_bar a{
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+}
+.banner{
+  background-image: url(https://www.w3schools.com/w3images/sailboat.jpg);
+  height: 550px;
+  background-size: cover;
+  background-position: 0px -250px ;
+  display:flex;
+  flex-direction: column-reverse;
+}
+.banner_child{
+  height: 50px;
+  width: 170px;
+  margin: 0px 0px 15px 15px; 
+  background-color: black;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.banner_child h2{
+  color: white;
+}
+h1{
+  padding: 15px 0px;
+  margin: 40px 0px 15px 0px;
+  text-align: center;
+}
+h4{
+  padding: 10px 0px;
+ 
+  text-align: center;
+}
+.dp_logo{
+  height: 250px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+.image{
+  margin: 20px 20px;
+  height: 120px;
+  width:  120px;
+  border-radius: 50%;
+  background-image: url(https://www.w3schools.com/w3images/avatar.jpg);
+  background-size: cover;
+}
+.dis{
+  height: 550px;
+  margin: 50px 0px;
+  background-color: #333333;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.disChild{
+  height:400px;
+  width: 300px;
+ 
+  background-color: white;
+}
+.child1{
+  background-color:#333333 ;
+}
+.child1 h2{
+  color: white;
+  padding: 10px 0px;
+  margin: 10px 0px;
+
+}
+.disChild p{
+  color: white;
+  font-size: medium;
+}
+.child2 img{
+  height: 50%;
+  width: 100%;
+
+}
+.child3 img{
+  height: 50%;
+  width: 100%;
+  
+}
+.child4 img{
+  height: 50%;
+  width: 100%;
+  
+}
+.pricing{
+  padding: 10px 0px;
+  margin-top: 30px;
+  text-align: center;
+}
+.choose{
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.bpp{
+  height:500px;
+  margin:40px 15px;
+  display:flex;
+  justify-content: space-between;
+}
+.bppChild{
+  height:100%;
+  width: 32%;
+}
+.basicChild1{
+  height: 100px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.basicChild1 h2{
+  color: white;
+}
+.basicChild2{
+  height: 48px;
+  border:1px solid rgb(169, 166, 166);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.basicChild3{
+  height: 120px;
+  border: 1px solid rgb(165, 160, 160);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.basicChild4{
+  height: 80px;
+  background-color: #F0F0F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.prochild1{
+  background-color: #666666;
+}
+.signUp{
+  height: 40px;
+  width: 120px;
+  padding : 5px;
+  color: white;
+  background-color: #009688;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info{
+  height: 600px;
+  background-color: #F0F0F0;
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.infoChild1{
+  height:400px;
+  width:40%;
+  margin: 100px 15px;
+ 
+}
+.contactUs{
+  margin: 0px 10px;
+  padding: 20px 0px;
+  font-size: 25px;
+  font-weight: lighter;
+}
+.address{
+   margin: 0px 10px;
+  padding: 10px 0px;
+  font-size: 18px;
+  font-weight: lighter;
+}
+.infoChild1 p{
+  margin: 15px 10px;
+  font-size: 17px;
+}
+.icons{
+  font-size: 20px;
+  font-weight: bold;
+  padding:10px 0px;
+  margin: 20px 10px;
+}
+.fill{
+  height: 400px;
+  width: 50%;
+
+  margin: 150px 15px;
+}
+.fillbox{
+  
+  margin:20px 15px;
+}
+.fillbox p{
+  font-size: 20px;
+}
+.fillbox input{
+  height:30px;
+  width:95%;
+}
+
+
+
+.image2 img{
+  width: 100%;
+  
+  padding: 0px;
+  margin: 0px;
+}
+.black{
+  height:250px;
+  background-color: black;
+}
