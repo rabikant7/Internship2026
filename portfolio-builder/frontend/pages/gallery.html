@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — PortfolioBuilder</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <main class="container">
+    <section class="page-hero fade-in">
+      <h1>Portfolio Gallery</h1>
+      <p>Explore portfolios published by students and beginners just like you.</p>
+    </section>
+
+    <div class="gallery-toolbar">
+      <input type="text" id="searchInput" placeholder="Search by name or title..." />
+      <select id="professionFilter">
+        <option value="">All Professions</option>
+        <option value="developer">Developer</option>
+        <option value="designer">Designer</option>
+        <option value="engineer">Engineer</option>
+        <option value="student">Student</option>
+        <option value="marketing">Marketing</option>
+        <option value="writer">Writer</option>
+      </select>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="spinner" style="grid-column: 1/-1;"></div>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../components/navbar.js"></script>
+  <script src="../components/footer.js"></script>
+  <script src="../js/gallery.js"></script>
+</body>
+</html>

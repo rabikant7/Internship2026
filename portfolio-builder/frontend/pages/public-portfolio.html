@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — PortfolioBuilder</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <main class="container">
+    <div class="preview-actions">
+      <button class="btn btn-outline btn-sm" id="likeBtn">❤️ Like <span id="likeCount">0</span></button>
+    </div>
+
+    <div class="card" style="margin: 20px 0 80px; padding: 40px 20px;" id="publicPortfolioContainer">
+      <div class="spinner"></div>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../components/navbar.js"></script>
+  <script src="../components/footer.js"></script>
+  <script src="../js/portfolio-render.js"></script>
+  <script src="../js/public-portfolio.js"></script>
+</body>
+</html>

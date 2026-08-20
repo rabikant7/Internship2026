@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio — PortfolioBuilder</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <main class="container">
+    <section class="dashboard-header fade-in">
+      <h1>My Portfolio</h1>
+      <p>A quick summary of what you've built so far.</p>
+    </section>
+
+    <div id="myPortfolioSummary" style="padding: 20px 0 20px;">
+      <div class="spinner"></div>
+    </div>
+
+    <div class="preview-actions" style="justify-content:flex-start;">
+      <button class="btn btn-primary" onclick="window.location.href='editor.html'">✏️ Edit Portfolio</button>
+      <button class="btn btn-outline" onclick="window.location.href='preview.html'">👁️ Full Preview</button>
+      <button class="btn btn-danger" id="deletePortfolioBtn">🗑️ Delete Portfolio</button>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../components/navbar.js"></script>
+  <script src="../components/footer.js"></script>
+  <script src="../js/my-portfolio.js"></script>
+</body>
+</html>

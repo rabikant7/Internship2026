@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — PortfolioBuilder</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <main class="container">
+    <section class="dashboard-header fade-in">
+      <h1 id="welcomeMessage">Welcome back! 👋</h1>
+      <p>Manage your portfolio, preview it, or explore what others have built.</p>
+    </section>
+
+    <div class="dashboard-grid">
+      <div class="card dashboard-card" id="createOrEditCard">
+        <div class="feature-icon">✏️</div>
+        <h3 id="editCardTitle">Create Portfolio</h3>
+        <p id="editCardText">Start building your professional portfolio</p>
+      </div>
+
+      <div class="card dashboard-card" onclick="window.location.href='editor.html'">
+        <div class="feature-icon">🧩</div>
+        <h3>Edit Portfolio</h3>
+        <p>Update your info, projects, and skills</p>
+      </div>
+
+      <div class="card dashboard-card" onclick="window.location.href='preview.html'">
+        <div class="feature-icon">👁️</div>
+        <h3>Preview Portfolio</h3>
+        <p>See your portfolio exactly as visitors will</p>
+      </div>
+
+      <div class="card dashboard-card" onclick="window.location.href='gallery.html'">
+        <div class="feature-icon">🖼️</div>
+        <h3>Gallery</h3>
+        <p>Browse public portfolios from other users</p>
+      </div>
+
+      <div class="card dashboard-card" onclick="window.location.href='my-portfolio.html'">
+        <div class="feature-icon">📁</div>
+        <h3>My Portfolio</h3>
+        <p>View your saved portfolio details</p>
+      </div>
+
+      <div class="card dashboard-card" id="logoutCard">
+        <div class="feature-icon">🚪</div>
+        <h3>Logout</h3>
+        <p>Sign out of your account</p>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="card stat-box">
+        <div class="stat-num" id="statSkills">0</div>
+        <div class="stat-label">Skills Added</div>
+      </div>
+      <div class="card stat-box">
+        <div class="stat-num" id="statProjects">0</div>
+        <div class="stat-label">Projects</div>
+      </div>
+      <div class="card stat-box">
+        <div class="stat-num" id="statStatus">Private</div>
+        <div class="stat-label">Portfolio Status</div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../components/navbar.js"></script>
+  <script src="../components/footer.js"></script>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

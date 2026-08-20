@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Preview — PortfolioBuilder</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <main class="container">
+    <section class="dashboard-header fade-in">
+      <h1>Portfolio Preview</h1>
+      <p>This is exactly how your portfolio will look to visitors.</p>
+    </section>
+
+    <div class="preview-actions">
+      <button class="btn btn-outline" id="editBtn">✏️ Edit Portfolio</button>
+      <button class="btn btn-primary" id="publishBtn">🌐 Publish Portfolio</button>
+      <button class="btn btn-outline" id="downloadPdfBtn">⬇️ Download as PDF</button>
+      <button class="btn btn-outline" id="shareBtn">🔗 Share Portfolio</button>
+    </div>
+
+    <div class="share-link-box" id="shareLinkBox" style="display:none;">
+      <input type="text" id="shareLinkInput" readonly />
+      <button class="btn btn-sm btn-primary" id="copyLinkBtn">Copy</button>
+    </div>
+
+    <div class="card" style="margin: 26px 0 80px; padding: 40px 20px;" id="portfolioPreviewContainer">
+      <div class="spinner"></div>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../components/navbar.js"></script>
+  <script src="../components/footer.js"></script>
+  <script src="../js/portfolio-render.js"></script>
+  <script src="../js/preview.js"></script>
+</body>
+</html>

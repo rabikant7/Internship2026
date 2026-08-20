@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Editor — PortfolioBuilder</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <main class="container">
+    <section class="dashboard-header fade-in">
+      <h1>Portfolio Editor</h1>
+      <p>Fill in each section on the left — your live preview updates instantly on the right.</p>
+    </section>
+
+    <div class="editor-layout">
+
+      <!-- ============ LEFT: EDITOR PANEL ============ -->
+      <div class="editor-panel">
+
+        <div class="editor-tabs">
+          <div class="editor-tab active" data-tab="about">About</div>
+          <div class="editor-tab" data-tab="skills">Skills</div>
+          <div class="editor-tab" data-tab="projects">Projects</div>
+          <div class="editor-tab" data-tab="experience">Experience</div>
+          <div class="editor-tab" data-tab="education">Education</div>
+          <div class="editor-tab" data-tab="certificates">Certificates</div>
+          <div class="editor-tab" data-tab="order">Reorder</div>
+        </div>
+
+        <!-- ABOUT / personal info -->
+        <div class="editor-section active" id="section-about">
+          <div class="image-upload-box">
+            <img id="profileImagePreview" src="https://via.placeholder.com/64" alt="Profile preview" />
+            <div>
+              <input type="file" id="profileImageInput" accept="image/*" />
+              <div class="field-error" id="imageError"></div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" placeholder="Jane Doe" />
+          </div>
+          <div class="form-group">
+            <label for="title">Professional Title</label>
+            <input type="text" id="title" placeholder="Frontend Developer" />
+          </div>
+          <div class="form-group">
+            <label for="bio">Short Bio</label>
+            <textarea id="bio" rows="4" placeholder="A short summary about yourself"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="you@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" placeholder="+91 98765 43210" />
+          </div>
+          <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" id="location" placeholder="Jaipur, India" />
+          </div>
+          <button class="btn btn-primary btn-block" id="saveAboutBtn">Save About</button>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="editor-section" id="section-skills">
+          <div class="form-group">
+            <label for="skillInput">Add a Skill</label>
+            <input type="text" id="skillInput" placeholder="e.g. JavaScript — press Enter to add" />
+          </div>
+          <div id="skillsList"></div>
+          <button class="btn btn-primary btn-block" id="saveSkillsBtn">Save Skills</button>
+        </div>
+
+        <!-- PROJECTS -->
+        <div class="editor-section" id="section-projects">
+          <div class="form-group">
+            <label for="projectTitle">Project Title</label>
+            <input type="text" id="projectTitle" placeholder="e.g. E-commerce Website" />
+          </div>
+          <div class="form-group">
+            <label for="projectDescription">Description</label>
+            <textarea id="projectDescription" rows="3" placeholder="What does this project do?"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="projectLink">Project Link (optional)</label>
+            <input type="text" id="projectLink" placeholder="https://github.com/you/project" />
+          </div>
+          <button class="btn btn-outline btn-block" id="addProjectBtn" type="button">+ Add Project</button>
+          <div id="projectsList" style="margin-top:16px;"></div>
+        </div>
+
+        <!-- EXPERIENCE -->
+        <div class="editor-section" id="section-experience">
+          <div class="form-group">
+            <label for="expCompany">Company</label>
+            <input type="text" id="expCompany" placeholder="Company name" />
+          </div>
+          <div class="form-group">
+            <label for="expRole">Role</label>
+            <input type="text" id="expRole" placeholder="e.g. Software Intern" />
+          </div>
+          <div class="form-group">
+            <label for="expDuration">Duration</label>
+            <input type="text" id="expDuration" placeholder="e.g. Jan 2024 – Jun 2024" />
+          </div>
+          <div class="form-group">
+            <label for="expDescription">Description</label>
+            <textarea id="expDescription" rows="3" placeholder="What did you work on?"></textarea>
+          </div>
+          <button class="btn btn-outline btn-block" id="addExpBtn" type="button">+ Add Experience</button>
+          <div id="experienceList" style="margin-top:16px;"></div>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="editor-section" id="section-education">
+          <div class="form-group">
+            <label for="eduSchool">School / University</label>
+            <input type="text" id="eduSchool" placeholder="e.g. Delhi University" />
+          </div>
+          <div class="form-group">
+            <label for="eduDegree">Degree</label>
+            <input type="text" id="eduDegree" placeholder="e.g. B.Sc Computer Science" />
+          </div>
+          <div class="form-group">
+            <label for="eduYear">Year</label>
+            <input type="text" id="eduYear" placeholder="e.g. 2022 – 2026" />
+          </div>
+          <button class="btn btn-outline btn-block" id="addEduBtn" type="button">+ Add Education</button>
+          <div id="educationList" style="margin-top:16px;"></div>
+        </div>
+
+        <!-- CERTIFICATES -->
+        <div class="editor-section" id="section-certificates">
+          <div class="form-group">
+            <label for="certTitle">Certificate Title</label>
+            <input type="text" id="certTitle" placeholder="e.g. AWS Cloud Practitioner" />
+          </div>
+          <div class="form-group">
+            <label for="certIssuer">Issued By</label>
+            <input type="text" id="certIssuer" placeholder="e.g. Amazon Web Services" />
+          </div>
+          <div class="form-group">
+            <label for="certYear">Year</label>
+            <input type="text" id="certYear" placeholder="e.g. 2025" />
+          </div>
+          <button class="btn btn-outline btn-block" id="addCertBtn" type="button">+ Add Certificate</button>
+          <div id="certificatesList" style="margin-top:16px;"></div>
+        </div>
+
+        <!-- REORDER (drag and drop) -->
+        <div class="editor-section" id="section-order">
+          <p style="color:var(--color-text-muted); font-size:0.88rem; margin-bottom:10px;">
+            Drag sections to change the order they appear in your portfolio.
+          </p>
+          <div class="section-order-list" id="sectionOrderList"></div>
+          <button class="btn btn-primary btn-block" id="saveOrderBtn" style="margin-top:14px;">Save Order</button>
+        </div>
+
+      </div>
+
+      <!-- ============ RIGHT: LIVE PREVIEW ============ -->
+      <div class="preview-panel">
+        <div class="preview-toolbar">
+          <div class="template-select" id="templateSelect">
+            <div class="template-chip active" data-template="modern">Modern</div>
+            <div class="template-chip" data-template="minimal">Minimal</div>
+            <div class="template-chip" data-template="creative">Creative</div>
+          </div>
+          <a href="preview.html" class="btn btn-sm btn-outline">Open Full Preview</a>
+        </div>
+        <div id="previewFrame">
+          <div class="spinner"></div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../components/navbar.js"></script>
+  <script src="../components/footer.js"></script>
+  <script src="../js/portfolio-render.js"></script>
+  <script src="../js/editor.js"></script>
+</body>
+</html>
